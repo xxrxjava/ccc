@@ -23,5 +23,8 @@ object SuspendFunctions {
     }
 }
 
+        lifecyclescope 
+implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
+
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.1"
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.1'
