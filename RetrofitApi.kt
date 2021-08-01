@@ -37,3 +37,40 @@
 *
 * */
 }
+
+
+class upload {
+/*--------------单文件上传--------------------*/
+    private fun testUpload() {
+        val file = File("")
+        val requestBody= RequestBody.create(MediaType.parse("image/png"),file)
+        val filePath= MultipartBody.Part.createFormData("上传的Key",
+        file.name,requestBody)
+
+        val call = wanAndroidApi.upload2()
+        call.execute()
+    }
+
+/*--------------多个文件上传--------------------*/
+private fun testUpload2() {
+    val files = listOf<File>()
+    val map = mutableMapOf<String, RequestBody>()
+    files.forEach {
+        file -> val requestBody = RequestBody.create(MediaType.parse("image/png"),file)
+        map["file\",filename\"test.png"] = requestBody
+    }
+    wanAndroidApi.upload2(map)
+}
+
+/*
+*     @Multipart
+    @POST("project/upload")
+    fun upload3(@PartMap map:Map<String,RequestBody>):Call<RequestBody>
+*
+*     @Multipart
+    @POST("project/upload")
+    fun upload3(@PartMap map:Map<String,RequestBody.Part>):Call<RequestBody>
+*
+* */
+
+}
