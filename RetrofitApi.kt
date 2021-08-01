@@ -18,7 +18,9 @@
     @GET("project/{id}/list")
     fun exmaple4(@Path("id")id:Int):Call<ResponseBody>
 
-
+    
+    @HTTP(method = "get",path = "project/tree/json",hasBody = false)
+    fun example():Call<ResponseBody>
 
     /* '@Streaming'返回的数据很大  如下载大文件*/
     @Streaming
