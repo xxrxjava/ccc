@@ -1,3 +1,17 @@
+echo "# aaa" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/xxrxjava/aaa.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/xxrxjava/aaa.git
+git branch -M main
+git push -u origin main
+
+
+
 （1）Context是什么？
 Context英文释义是当前上下文，或者当前场景
 ①该类是一个抽象(abstract class)类；
